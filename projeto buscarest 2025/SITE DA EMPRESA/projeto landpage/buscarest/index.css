@@ -1,0 +1,356 @@
+/* Reseta alguns estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* Container padrão */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Cabeçalho fixo */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #db3030;
+  color: white;
+  z-index: 1000;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #fff1f1;
+}
+
+/* Hero Section */
+#hero {
+  height: 100vh;
+  color: white;
+  background: url('hero.jpg') no-repeat center center/cover;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+#hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in 0.5s;
+}
+
+#hero p {
+  font-size: 1.2em;
+  color: #000000;
+  margin-bottom: 30px;
+  animation: fadeIn 1.5s ease-in 1s;
+}
+
+#hero .button {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #db3030;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  animation: fadeIn 2s ease-in 1.5s;
+}
+
+#hero .button:hover {
+  background-color: #e63434;
+}
+
+/* Seções gerais */
+section {
+  padding: 70px 0;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+section p {
+  font-size: 1.1em;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+ul li:hover {
+  color: #ff6b6b;
+  transform: translateX(10px);
+}
+
+ul li:before {
+  content: "✔";
+  color: #ff6b6b;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* CTA Section */
+#cta {
+  background: #db3030;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#cta h2 {
+  margin-bottom: 15px;
+  color: white;
+}
+
+#cta .button {
+  background-color: white;
+  color: #db3030;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#cta .button:hover {
+  background-color: #fff1f1;
+  color: #db3030;
+}
+
+/* Rodapé */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer h2 {
+  margin-bottom: 10px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Animação Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  #hero h1 {
+    font-size: 2em;
+  }
+
+  #hero h2 {
+    font-size: 1.8em;
+  }
+
+  #hero p {
+    font-size: 1em;
+  }
+
+  #hero .button {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  section h2 {
+    font-size: 2em;
+  }
+
+  section p {
+    font-size: 1em;
+  }
+}
+/* Estilo do botão "Conheça a Equipe" */
+.button {
+  display: inline-block;
+  position: relative;
+  margin-top: 20px;
+  padding: 10px 30px;
+  background-color: #db3030;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e63434;
+}
+
+/* Estilo do popup */
+/* Estilo do botão "Conheça a Equipe" */
+.button {
+  display: inline-block;
+  position: relative;
+  margin-top: 20px;
+  padding: 10px 30px;
+  background-color: #db3030;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e63434;
+}
+
+/* Estilo do popup */
+.popup-toggle {
+  display: none;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 90%; /* Define uma largura máxima para o popup */
+  overflow-y: auto;
+}
+
+.popup-content h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
+}
+
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Garante 5 membros por linha */
+  gap: 20px;
+  justify-items: center;
+  width: 100%;
+}
+
+.member {
+  margin: 20px;
+  text-align: center;
+}
+
+.member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #db3030;
+}
+
+.member p {
+  font-size: 1.1em;
+  color: #333;
+}
+
+
+
+.close-popup-btn:hover {
+  background-color: #e63434;
+}
+
+.close-btn:hover, .close-popup-btn:hover {
+  color: #db3030;
+}
+
+/* Exibir o popup quando o checkbox for marcado */
+.popup-toggle:checked + .button + .popup {
+  display: flex;
+}

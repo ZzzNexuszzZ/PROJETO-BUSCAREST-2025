@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Reserva</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+
+        .form-group input[type="number"] {
+            width: 50%;
+        }
+
+        .button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Reservar Mesa</h1>
+
+    <form action="submit.php" method="POST">
+        <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" class="input-field" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" class="input-field" required>
+        </div>
+
+        <div class="form-group">
+            <label for="restaurant">Escolha o Restaurante:</label>
+            <select id="restaurant" name="restaurant" class="input-field" required>
+                <option value="">Selecione um restaurante</option>
+                <option value="La Trattoria Italiana">La Trattoria Italiana (Itália)</option>
+                <option value="Sakura Sushi">Sakura Sushi (Japão)</option>
+                <option value="Casa do Taco">Casa do Taco (México)</option>
+                <option value="Chez Pierre">Chez Pierre (França)</option>
+                <option value="Churrascaria Gaúcha">Churrascaria Gaúcha (Brasil)</option>
+                <option value="Sabores do Marrocos">Sabores do Marrocos (Marrocos)</option>
+                <option value="Curry Express">Curry Express (Índia)</option>
+                <option value="Taste of Seoul">Taste of Seoul (Coreia do Sul)</option>
+                <option value="Wurst Haus">Wurst Haus (Alemanha)</option>
+                <option value="Tasca do Bacalhau">Tasca do Bacalhau (Portugal)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="date">Data da Reserva:</label>
+            <input type="date" id="date" name="date" class="input-field" required>
+        </div>
+
+        <div class="form-group">
+            <label for="time">Horário:</label>
+            <input type="time" id="time" name="time" class="input-field" required>
+        </div>
+
+        <div class="form-group">
+            <label for="guests">Número de Pessoas:</label>
+            <input type="number" id="guests" name="guests" min="1" max="20" class="input-field" required>
+        </div>
+
+        <button type="submit" class="button">Confirmar Reserva</button>
+    </form>
+</div>
+
+</body>
+</html>
